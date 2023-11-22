@@ -14,21 +14,21 @@ CONF_IAQ_MODE = "iaq_mode"
 CONF_SAMPLE_RATE = "sample_rate"
 CONF_STATE_SAVE_INTERVAL = "state_save_interval"
 
-bme680_bsec_ns = cg.esphome_ns.namespace("bme68x_bsec")
+bme68x_bsec_ns = cg.esphome_ns.namespace("bme68x_bsec")
 
-IAQMode = bme680_bsec_ns.enum("IAQMode")
+IAQMode = bme68x_bsec_ns.enum("IAQMode")
 IAQ_MODE_OPTIONS = {
     "STATIC": IAQMode.IAQ_MODE_STATIC,
     "MOBILE": IAQMode.IAQ_MODE_MOBILE,
 }
 
-SampleRate = bme680_bsec_ns.enum("SampleRate")
+SampleRate = bme68x_bsec_ns.enum("SampleRate")
 SAMPLE_RATE_OPTIONS = {
     "LP": SampleRate.SAMPLE_RATE_LP,
     "ULP": SampleRate.SAMPLE_RATE_ULP,
 }
 
-BME680BSECComponent = bme680_bsec_ns.class_(
+BME680BSECComponent = bme68x_bsec_ns.class_(
     "BME680BSECComponent", cg.Component, i2c.I2CDevice
 )
 
