@@ -14,7 +14,7 @@ CONF_IAQ_MODE = "iaq_mode"
 CONF_SAMPLE_RATE = "sample_rate"
 CONF_STATE_SAVE_INTERVAL = "state_save_interval"
 
-bme680_bsec_ns = cg.esphome_ns.namespace("bme680_bsec")
+bme680_bsec_ns = cg.esphome_ns.namespace("bme68x_bsec")
 
 IAQMode = bme680_bsec_ns.enum("IAQMode")
 IAQ_MODE_OPTIONS = {
